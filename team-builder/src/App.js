@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+
 import Form from './components/form/Form';
+import Card from './components/card/Card';
+
 import './App.css';
 
 function App() {
@@ -33,6 +36,8 @@ function App() {
     <div className="App">
 
       <Form teamList={teamList} setTeamList={setTeamList}/>
+
+      <Card />
 
     </div>
   );
