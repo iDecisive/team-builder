@@ -27,6 +27,7 @@ function App() {
     );
 
     console.log('Step 1:', teamList);
+    console.log('Step 2: (click submit to see data)')
 
   return (
     <div className="App">
