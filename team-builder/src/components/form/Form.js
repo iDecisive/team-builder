@@ -27,8 +27,14 @@ let Form = props => { //props takes in the teamList data and the setTeamList fun
 
         event.preventDefault();
 
+        setTeamList(
+            [
+                ...teamList, //Copy of the original team list
+                formData
+            ]
+        );
 
-        console.log('Form data:', formData)
+        console.log('Form data:', formData);
         console.log('New team list:', teamList);
 
     }
