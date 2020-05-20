@@ -4,7 +4,9 @@ import './EditForm.css';
 
 let EditForm = props => { //props takes in the teamList data and the setTeamList function - aka you have access to those here
 
-    let index = props.index; //Team list and func to set the team list passed down from App.js through props
+    let index = props.index; //Team list and func to set the team list passed down from 'App.js > Card.js > Here' through props
+
+    let editMember = props.editMember;
 
     let [formData, setFormData] = useState(
         {
@@ -29,7 +31,7 @@ let EditForm = props => { //props takes in the teamList data and the setTeamList
 
         event.preventDefault();
 
-        console.log('Clicked submit on an edit form');
+        editMember(index, formData);
 
     }
 

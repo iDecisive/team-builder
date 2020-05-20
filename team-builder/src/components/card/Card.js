@@ -16,6 +16,8 @@ let Card = props => {
 
     let index = props.index; //Index of item in array (team member index or ID)
 
+    let editMember = props.editMember; //Func from app to edit a member in teamList - just here to be passed down to EditForm component
+
 
     let editClick = event => {
 
@@ -51,7 +53,7 @@ let Card = props => {
 
             <button onClick={editClick}>Edit</button>
 
-            <EditForm index={index} />
+            <EditForm index={index} editMember={editMember} />
 
         </div>
 
