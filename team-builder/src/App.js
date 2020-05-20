@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import update from 'immutability-helper';
 
 import Form from './components/form/Form';
 import Card from './components/card/Card';
@@ -35,7 +36,13 @@ function App() {
 
     let editMember = (index, newInfo) => { //Called from clicking 'submit' on an EditForm - used for changing a member's info
 
-      console.log('Edited member ' + index, 'New info: ', newInfo);
+    let { name, email, role } = newInfo;
+
+      teamList[index].name = name;
+      teamList[index].email = email;
+      teamList[index].role = role;
+
+      console.log('Edited member ' + index, 'New team list: ', teamList);
 
     }
 
