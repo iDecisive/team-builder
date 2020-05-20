@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Card.css'
+
 let Card = props => {
 
     console.log('Card works')
@@ -19,6 +21,8 @@ let Card = props => {
             <p>{email}</p>
 
             <p>{role}</p>
+
+            <button>Edit</button>
 
         </div>
 
