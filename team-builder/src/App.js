@@ -37,7 +37,7 @@ function App() {
 
       <Form teamList={teamList} setTeamList={setTeamList}/>
 
-      {teamList.map((item, index) => <Card teamMember={item} />)} {/* Returns all members in teamList and displays using the Card component */}
+      {teamList.map((item, index) => <Card teamMember={item} index={index} key={index}/>)} {/* Returns all members in teamList and displays using the Card component */}
 
     </div>
   );
