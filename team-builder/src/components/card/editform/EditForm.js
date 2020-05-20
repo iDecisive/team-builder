@@ -33,6 +33,9 @@ let EditForm = props => { //props takes in the teamList data and the setTeamList
 
         editMember(index, formData);
 
+        event.target.style.display = 'none';
+        event.target.parentElement.querySelector('button').textContent = 'Edit'; 
+
     }
 
     return (

@@ -38,11 +38,21 @@ function App() {
 
     let { name, email, role } = newInfo;
 
-      teamList[index].name = name;
-      teamList[index].email = email;
-      teamList[index].role = role;
+      const newTeamList = update(teamList, 
+        {[index]: 
+          
+          {$set: 
+            {
 
-      console.log('Edited member ' + index, 'New team list: ', teamList);
+              name: name,
+              email: email,
+              role: role
+
+            }}});
+
+      setTeamList(newTeamList);
+
+      console.log('Edited member ' + index, 'New team list: ', teamList); 
 
     }
 
