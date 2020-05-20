@@ -1,12 +1,26 @@
 import React from 'react';
 
-let Card = () => {
+let Card = props => {
 
     console.log('Card works')
 
+    let { //Variable - keys from an object here passed from App.js through props
+        name,
+        email,
+        role
+    } = props.teamMember;
+
     return (
 
-        null
+        <div className='team-member'>
+
+            <h2>{name}</h2>
+
+            <p>{email}</p>
+
+            <p>{role}</p>
+
+        </div>
 
     )
 
